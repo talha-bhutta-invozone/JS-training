@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        var obj = new Object();
+        obj.fullname = "talha"
+        obj.lastname = "bhutta"
+        obj.designation = "frontend dev"
+
+
+        function obj2(salary, company) {
+            this.salary = salary;
+            this.company = company;
+        }
+
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            id: 5566,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+    </script>
+
+</head>
+
+<body>
+    <h1>Objects</h1>
+
+    <script>
+        document.write("props are :" + obj.fullname + " " + obj.lastname + " " + obj.designation);
+        var myObject = new obj2('4000', 'invozone');
+        document.write("company is :" + " " + myObject.company + "salary is : " + " " + myObject.salary);
+
+        document.write(person.fullName());
+
+    </script>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Array some() and every()</h1>
+    <script>
+        var ages = [13, 16 , 19, 20];
+        document.write("ages:" + " " + ages + "<br/><br/>")
+        var b = ages.some(checkAdult);
+        function checkAdult(age){
+            return age >= 18;
+        }
+      
+        document.write('result of some() function' + " " + b + "<br/><br/>")
+
+        var ages = [13, 16 , 19, 20];
+        var c = ages.every(checkAdultEvery);
+        function checkAdultEvery(age){
+            return age >= 18;
+        }
+      
+        document.write('result of every() function' + " " + c)
+    </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+    <h1>Array forEach() </h1>
+    <script>
+        var names = ["talha", "hamza", "hashir", "fahad", "ahmad"];
+        document.write(names + "<br/>")
+        names.forEach(function(name, index){
+            document.write(index + ": " + name + " " + "new" + "<br/>")
+        })
+    </script>
+</body>
+
+</html>
